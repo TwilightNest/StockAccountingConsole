@@ -1,6 +1,6 @@
 #include <windows.h>
 #include <iostream>
-#include "FilesWorker.h"
+#include "ProductContext.h"
 
 using namespace std;
 
@@ -15,8 +15,8 @@ void RunAsAdministrator()
 		{
 		case 1:
 		{
-			FilesWorker fw("test.txt");
-			fw.GetProductsList();
+			ProductContext pc("Products.txt");
+			pc.ShowProductsList();
 			break;
 		}
 		case 2:
