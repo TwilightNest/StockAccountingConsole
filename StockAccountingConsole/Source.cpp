@@ -24,7 +24,7 @@ void RunAsAdministrator()
 			break;
 		}
 		default:
-			cout << "Invalid choise, exit...";
+			cout << "Invalid choise, back...";
 			return;
 		}
 	}
@@ -37,7 +37,6 @@ void RunAsUser()
 
 void main()
 {
-	setlocale(LC_ALL, "C.UTF-8");
 	while (true)
 	{
 		cout << "Choose user: \n1)Admin\n2)User\nInput: ";
