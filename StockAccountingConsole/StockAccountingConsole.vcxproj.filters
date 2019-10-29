@@ -19,6 +19,12 @@
     <Filter Include="Source Files\Products">
       <UniqueIdentifier>{64fe9689-a1ed-43aa-a906-f359893451ee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Roles">
+      <UniqueIdentifier>{676fe1da-26f8-40e9-bb7f-4f0e27188ded}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Roles">
+      <UniqueIdentifier>{d6157229-34d1-49d8-ba09-280193fc65ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -30,6 +36,12 @@
     <ClCompile Include="ProductContext.cpp">
       <Filter>Source Files\Products</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.cpp">
+      <Filter>Source Files\Roles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\User.cpp">
+      <Filter>Source Files\Roles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Product.h">
@@ -37,6 +49,12 @@
     </ClInclude>
     <ClInclude Include="ProductContext.h">
       <Filter>Header Files\Products</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.h">
+      <Filter>Header Files\Roles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\User.h">
+      <Filter>Header Files\Roles</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
