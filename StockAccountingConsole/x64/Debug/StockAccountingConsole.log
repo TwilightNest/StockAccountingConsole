@@ -1,8 +1,10 @@
 ﻿  Admin.cpp
-  User.cpp
-  Product.cpp
+C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.h(33,43): error C2365: 'Admin::Login': redefinition; previous definition was 'data member'
+C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.h(9): message : see declaration of 'Admin::Login'
+C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.cpp(4,1): error C2512: 'ProductContext': no appropriate default constructor available
+C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\ProductContext.h(5,7): message : see declaration of 'ProductContext'
   ProductContext.cpp
   Source.cpp
+C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.cpp(9,1): error C2063: 'Admin::Login': not a function
   Generating Code...
 C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Source.cpp(39,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  StockAccountingConsole.vcxproj -> C:\Users\I'am\source\repos\StockAccountingConsole\x64\Debug\StockAccountingConsole.exe

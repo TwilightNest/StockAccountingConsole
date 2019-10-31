@@ -2,6 +2,8 @@
 #include <iostream>
 #include <sstream>
 
+ProductContext::ProductContext() {}
+
 ProductContext::ProductContext(string path)
 {
 	_path = path;

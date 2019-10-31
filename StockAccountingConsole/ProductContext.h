@@ -1,12 +1,13 @@
+#include "Product.h"
 #include <vector>
 #include <fstream>
-#include <string>
-#include "Product.h"
 
 class ProductContext
 {
 public:
 	vector<Product> Products;
+
+	ProductContext();
 
 	ProductContext(string path);
 
