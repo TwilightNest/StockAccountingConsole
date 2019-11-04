@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Product::Product() {}
+//Product::Product() {}
 
 Product::Product(string name, int count, int price, tm date, string fio)
 {

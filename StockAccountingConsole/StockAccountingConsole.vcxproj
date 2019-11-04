@@ -128,14 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.cpp" />
+    <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\Role.cpp" />
     <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\User.cpp" />
+    <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\UsersContext.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="ProductContext.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.h" />
+    <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\Role.h" />
     <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\User.h" />
+    <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\UsersContext.h" />
     <ClInclude Include="Product.h" />
     <ClInclude Include="ProductContext.h" />
   </ItemGroup>

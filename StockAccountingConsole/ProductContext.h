@@ -7,8 +7,6 @@ class ProductContext
 public:
 	vector<Product> Products;
 
-	ProductContext();
-
 	ProductContext(string path);
 
 	void ShowProductsList();

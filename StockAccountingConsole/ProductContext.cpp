@@ -2,8 +2,6 @@
 #include <iostream>
 #include <sstream>
 
-ProductContext::ProductContext() {}
-
 ProductContext::ProductContext(string path)
 {
 	_path = path;
@@ -49,7 +47,6 @@ vector<Product> ProductContext::ParseProducts()
 
 Product ProductContext::GetProductFromString(string str)
 {
-	auto product = Product();
 	stringstream ss(str);
 	string token;
 	vector<string> tmp;
@@ -57,11 +54,7 @@ Product ProductContext::GetProductFromString(string str)
 	{
 		tmp.push_back(token);
 	}
-	product.Name = tmp[0];
-	product.Count = stoi(tmp[1]);
-	product.Price = stoi(tmp[2]);
-	product.Date = Product::ConvertStringToDate(tmp[3]);
-	product.Fio = tmp[4];
+	Product product(tmp[0], stoi(tmp[1]), stoi(tmp[2]), Product::ConvertStringToDate(tmp[3]), tmp[4]);
 	return product;
 }
 

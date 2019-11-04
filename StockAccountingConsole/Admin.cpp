@@ -1,25 +1,26 @@
 #include "Admin.h"
 
-Admin::Admin(string login, string password)
+Admin::Admin(string login, string password) : Role(login, password)
 {
-	Name = login;
-	_password = password;
-	_context = ProductContext("products.txt");
+	_userContext = UsersContext();
 }
 
-void Admin::ShowProducts()
+void Admin::ShowUsers()
 {
-	_context.ShowProductsList();
+
 }
 
-void Admin::Login(string login, string password)
+void Admin::AddUser()
 {
-	try
-	{
 
-	}
-	catch (const std::exception&)
-	{
+}
 
-	}
+void Admin::ChangeUser()
+{
+
+}
+
+void Admin::DeleteUser()
+{
+
 }

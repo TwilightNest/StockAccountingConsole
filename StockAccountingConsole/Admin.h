@@ -1,22 +1,14 @@
-#include "ProductContext.h"
+#include "Role.h"
+#include "UsersContext.h"
 #include <string>
 
 using namespace std;
 
-class Admin
+class Admin : public Role
 {
 public:
-	string Name;
 
 	Admin(string login, string password);
-
-	void ShowProducts();
-
-	void AddProoduct();
-
-	void ChangeProduct();
-
-	void DeleteProduct();
 
 	void ShowUsers();
 
@@ -26,9 +18,6 @@ public:
 
 	void DeleteUser();
 
-private:
-	string _password;
-	ProductContext _context;
-
-	void Login(string login, string password);
+protected:
+	UsersContext _userContext;
 };

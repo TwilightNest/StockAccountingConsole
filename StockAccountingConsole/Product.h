@@ -11,8 +11,6 @@ public:
 	tm Date;
 	string Fio;
 
-	Product();
-
 	Product(string name, int count, int price, tm date, string fio);
 
 	static string ConvertDateToString(tm date);

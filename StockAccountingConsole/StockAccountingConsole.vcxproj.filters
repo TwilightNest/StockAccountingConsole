@@ -42,6 +42,12 @@
     <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\User.cpp">
       <Filter>Source Files\Roles</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\UsersContext.cpp">
+      <Filter>Source Files\Roles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\Role.cpp">
+      <Filter>Source Files\Roles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Product.h">
@@ -54,6 +60,12 @@
       <Filter>Header Files\Roles</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\User.h">
+      <Filter>Header Files\Roles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\UsersContext.h">
+      <Filter>Header Files\Roles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\Role.h">
       <Filter>Header Files\Roles</Filter>
     </ClInclude>
   </ItemGroup>

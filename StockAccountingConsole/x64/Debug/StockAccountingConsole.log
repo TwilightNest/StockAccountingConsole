@@ -1,10 +1,9 @@
-﻿  Admin.cpp
-C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.h(33,43): error C2365: 'Admin::Login': redefinition; previous definition was 'data member'
-C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.h(9): message : see declaration of 'Admin::Login'
-C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.cpp(4,1): error C2512: 'ProductContext': no appropriate default constructor available
+﻿  Role.cpp
+C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Role.cpp(5,1): error C2512: 'ProductContext': no appropriate default constructor available
 C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\ProductContext.h(5,7): message : see declaration of 'ProductContext'
+C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Role.cpp(5,1): error C2512: 'std::basic_istream<char,std::char_traits<char>>': no appropriate default constructor available
   ProductContext.cpp
   Source.cpp
-C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.cpp(9,1): error C2063: 'Admin::Login': not a function
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\iosfwd(215,23): message : see declaration of 'std::basic_istream<char,std::char_traits<char>>'
   Generating Code...
-C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Source.cpp(39,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\I'am\source\repos\StockAccountingConsole\StockAccountingConsole\Source.cpp(41,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
