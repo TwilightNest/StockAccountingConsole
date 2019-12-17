@@ -1,3 +1,4 @@
+#pragma once
 #include "Product.h"
 #include <vector>
 #include <fstream>
@@ -7,15 +8,15 @@ class ProductContext
 public:
 	vector<Product> Products;
 
-	ProductContext(string path);
+	ProductContext();
 
 	void ShowProductsList();
 
-	void AddProduct(Product product);
+	void AddProduct(Product &product);
 
-	void UpdateProduct(Product product);
+	void UpdateProduct(string &name);
 
-	void DeleteProduct(Product product);
+	void DeleteProduct(string &name);
 
 private:
 	string _path;
@@ -24,7 +25,7 @@ private:
 
 	vector<Product> ParseProducts();
 
-	Product GetProductFromString(string str);
+	Product GetProductFromString(string &str);
 
 	void UpdateFile();
 };

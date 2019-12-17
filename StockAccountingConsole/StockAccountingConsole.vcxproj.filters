@@ -13,16 +13,22 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Products">
+    <Filter Include="Header Files\Contexts">
+      <UniqueIdentifier>{d9fe1b24-d8c7-4ea7-9800-3ffc9935b5b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models">
       <UniqueIdentifier>{451b5b4b-c016-4346-906e-3fc4e9627306}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Products">
-      <UniqueIdentifier>{64fe9689-a1ed-43aa-a906-f359893451ee}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Roles">
+    <Filter Include="Header Files\Models\Roles">
       <UniqueIdentifier>{676fe1da-26f8-40e9-bb7f-4f0e27188ded}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Roles">
+    <Filter Include="Source Files\Contexts">
+      <UniqueIdentifier>{0c543ce5-1980-49cc-ac53-ef01d591ba9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Models">
+      <UniqueIdentifier>{64fe9689-a1ed-43aa-a906-f359893451ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Models\Roles">
       <UniqueIdentifier>{d6157229-34d1-49d8-ba09-280193fc65ba}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -31,42 +37,42 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Product.cpp">
-      <Filter>Source Files\Products</Filter>
+      <Filter>Source Files\Models</Filter>
     </ClCompile>
     <ClCompile Include="ProductContext.cpp">
-      <Filter>Source Files\Products</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.cpp">
-      <Filter>Source Files\Roles</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\User.cpp">
-      <Filter>Source Files\Roles</Filter>
+      <Filter>Source Files\Contexts</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\UsersContext.cpp">
-      <Filter>Source Files\Roles</Filter>
+      <Filter>Source Files\Contexts</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\Role.cpp">
-      <Filter>Source Files\Roles</Filter>
+    <ClCompile Include="UserRole.cpp">
+      <Filter>Source Files\Models\Roles</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminRole.cpp">
+      <Filter>Source Files\Models\Roles</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>Source Files\Models</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Product.h">
-      <Filter>Header Files\Products</Filter>
+      <Filter>Header Files\Models</Filter>
     </ClInclude>
     <ClInclude Include="ProductContext.h">
-      <Filter>Header Files\Products</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\Admin.h">
-      <Filter>Header Files\Roles</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\User.h">
-      <Filter>Header Files\Roles</Filter>
+      <Filter>Header Files\Contexts</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\UsersContext.h">
-      <Filter>Header Files\Roles</Filter>
+      <Filter>Header Files\Contexts</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\Role.h">
-      <Filter>Header Files\Roles</Filter>
+    <ClInclude Include="UserRole.h">
+      <Filter>Header Files\Models\Roles</Filter>
+    </ClInclude>
+    <ClInclude Include="AdminRole.h">
+      <Filter>Header Files\Models\Roles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\I%27am\source\repos\StockAccountingConsole\StockAccountingConsole\User.h">
+      <Filter>Header Files\Models</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

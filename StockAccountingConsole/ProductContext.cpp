@@ -2,34 +2,85 @@
 #include <iostream>
 #include <sstream>
 
-ProductContext::ProductContext(string path)
+ProductContext::ProductContext()
 {
-	_path = path;
+	_path = "Products.txt";
 	Products = ParseProducts();
 }
 
 void ProductContext::ShowProductsList()
 {
+	cout << endl << "----------------------------------------------------------------------" << endl;
 	for (int i = 0; i < Products.size(); i++)
 	{
-		cout << Products[i].Name << "\t" << Products[i].Count << "\t" << Products[i].Price << "\t" << Product::ConvertDateToString(Products[i].Date) << "\t" << Products[i].Fio << "\t" << endl;
+		cout << Products[i].Name << "\t"
+			<< Products[i].Count << "\t"
+			<< Products[i].Price << "\t"
+			<< Product::ConvertDateToString(Products[i].Date) << "\t"
+			<< Products[i].Fio << "\t" << endl;
 	}
+	cout << "----------------------------------------------------------------------" << endl;
 }
 
-void ProductContext::AddProduct(Product product)
+void ProductContext::AddProduct(Product &product)
 {
 	Products.push_back(product);
 	UpdateFile();
+	cout << "----------------------------------------------------------------------" << endl;
+	cout << "Done!" << endl;
+	cout << "----------------------------------------------------------------------" << endl;
 }
 
-void ProductContext::UpdateProduct(Product product)
+void ProductContext::UpdateProduct(string& name)
 {
-	UpdateFile();
+	for (int i = 0; i < Products.size(); ++i)
+	{
+		if (Products[i].Name == name)
+		{
+			string tmpDate;
+			cout << "Enter new product name: ";
+			cin >> Products[i].Name;
+			cout << endl << "Enter new count: ";
+			cin >> Products[i].Count;
+			cout << endl << "Enter new price: ";
+			cin >> Products[i].Price;
+			cout << endl << "Enter new date(dd::mm::yy): ";
+			cin >> tmpDate;
+			Products[i].Date = Product::ConvertStringToDate(tmpDate);
+			cout << endl << "Enter new FIO: ";
+			cin >> Products[i].Fio;
+			cout << endl;
+			UpdateFile();
+			cout << "----------------------------------------------------------------------" << endl;
+			cout << "Done!" << endl;
+			cout << "----------------------------------------------------------------------" << endl;
+			return;
+		}
+	}
+	cout << "----------------------------------------------------------------------" << endl;
+	cout << "No such product" << endl;
+	cout << "----------------------------------------------------------------------" << endl;
 }
 
-void ProductContext::DeleteProduct(Product product)
+void ProductContext::DeleteProduct(string& name)
 {
-	UpdateFile();
+	auto iter = Products.begin();
+	for (int i = 0; i < Products.size(); ++i)
+	{
+		if (Products[i].Name == name)
+		{
+			Products.erase(iter);
+			UpdateFile();
+			cout << "----------------------------------------------------------------------" << endl;
+			cout << "Done!" << endl;
+			cout << "----------------------------------------------------------------------" << endl;
+			return;
+		}
+		iter++;
+	}
+	cout << "----------------------------------------------------------------------" << endl;
+	cout << "No such product" << endl;
+	cout << "----------------------------------------------------------------------" << endl;
 }
 
 vector<Product> ProductContext::ParseProducts()
@@ -45,7 +96,7 @@ vector<Product> ProductContext::ParseProducts()
 	return products;
 }
 
-Product ProductContext::GetProductFromString(string str)
+Product ProductContext::GetProductFromString(string &str)
 {
 	stringstream ss(str);
 	string token;
