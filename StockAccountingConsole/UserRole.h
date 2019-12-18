@@ -18,6 +18,10 @@ public:
 
 	void DeleteProduct();
 
+	void SortProduct();
+
+	void SearchProduct();
+
 protected:
 
 	ProductContext _productContext;

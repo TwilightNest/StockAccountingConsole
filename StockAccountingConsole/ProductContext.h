@@ -18,6 +18,14 @@ public:
 
 	void DeleteProduct(string &name);
 
+	vector<Product*> ConvertToPointers();
+
+	void SortProduct(int& sortBy);
+
+	void SearchProduct(string& str, int& searchBy);
+
+	void IndividualTask(int& x, int& y);
+
 private:
 	string _path;
 	ifstream _is;
@@ -26,6 +34,8 @@ private:
 	vector<Product> ParseProducts();
 
 	Product GetProductFromString(string &str);
+
+	string GetStringFromProduct(Product& product);
 
 	void UpdateFile();
 };

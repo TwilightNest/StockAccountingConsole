@@ -10,7 +10,7 @@ void RunAsAdministrator(AdminRole& admin)
 {
 	while (true)
 	{
-		cout << "Choose operation:\n1)Show products list\n2)Add product\n3)Update product\n4)Delete product\n5)Show users list\n6)Add user\n7)Update user\n8)Delete user\n9)Individual task\nInput: ";
+		cout << "Choose operation:\n1)Show products list\n2)Add product\n3)Update product\n4)Delete product\n5)Sort product\n6)Search product\n7)Show users list\n8)Add user\n9)Update user\n10)Delete user\n11)Sort user\n12)Search user\n13)Individual task\n???)Exit\nInput: ";
 		int choise;
 		cin >> choise;
 		switch (choise)
@@ -37,22 +37,47 @@ void RunAsAdministrator(AdminRole& admin)
 		}
 		case 5:
 		{
-			admin.ShowUsersList();
+			admin.SortProduct();
 			break;
 		}
 		case 6:
 		{
-			admin.AddUser();
+			admin.SearchProduct();
 			break;
 		}
 		case 7:
 		{
-			admin.UpdateUser();
+			admin.ShowUsersList();
 			break;
 		}
 		case 8:
 		{
+			admin.AddUser();
+			break;
+		}
+		case 9:
+		{
+			admin.UpdateUser();
+			break;
+		}
+		case 10:
+		{
 			admin.DeleteUser();
+			break;
+		}
+		case 11:
+		{
+			admin.SortUser();
+			break;
+		}
+		case 12:
+		{
+			admin.SearchUser();
+			break;
+		}
+		case 13:
+		{
+			admin.IndividualTask();
 			break;
 		}
 		default:
@@ -66,7 +91,7 @@ void RunAsUser(UserRole& user)
 {
 	while (true)
 	{
-		cout << "Choose operation:\n1)Show products list\n2)Add product\n3)Update product\n4)Delete product\nInput: ";
+		cout << "Choose operation:\n1)Show products list\n2)Add product\n3)Update product\n4)Delete product\n5)Sort product\n6)Search product\nInput: ";
 		int choise;
 		cin >> choise;
 		switch (choise)
@@ -89,6 +114,16 @@ void RunAsUser(UserRole& user)
 		case 4:
 		{
 			user.DeleteProduct();
+			break;
+		}
+		case 5:
+		{
+			user.SortProduct();
+			break;
+		}
+		case 6:
+		{
+			user.SearchProduct();
 			break;
 		}
 		default:

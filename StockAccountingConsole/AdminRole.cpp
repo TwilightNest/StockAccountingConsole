@@ -58,6 +58,27 @@ void AdminRole::DeleteProduct()
 	_productContext.DeleteProduct(name);
 }
 
+void AdminRole::SortProduct()
+{
+	int choice;
+	cout << "Sort for: \n1)Name\n2)Count\n3)Price\nInput: ";
+	cin >> choice;
+	cout << endl;
+	_productContext.SortProduct(choice);
+}
+
+void AdminRole::SearchProduct()
+{
+	int choice;
+	string str;
+	cout << "Search for: \n1)Name\n2)Count\n3)Price\nInput: ";
+	cin >> choice;
+	cout << endl << "Input string for search: ";
+	cin >> str;
+	cout << endl;
+	_productContext.SearchProduct(str, choice);
+}
+
 void AdminRole::ShowUsersList()
 {
 	_userContext.ShowUsersList();
@@ -104,4 +125,37 @@ void AdminRole::DeleteUser()
 	cout << endl;
 
 	_userContext.DeleteUser(name);
+}
+
+void AdminRole::SortUser()
+{
+	int choice;
+	cout << "Sort for: \n1)Login\n2)Name\n3)Admin\nInput: ";
+	cin >> choice;
+	cout << endl;
+	_userContext.SortUser(choice);
+}
+
+void AdminRole::SearchUser()
+{
+	int choice;
+	string str;
+	cout << "Search for: \n1)Login\n2)Name\n3)Admin\nInput: ";
+	cin >> choice;
+	cout << endl << "Input string for search: ";
+	cin >> str;
+	cout << endl;
+	_userContext.SearchUser(str, choice);
+}
+
+void AdminRole::IndividualTask()
+{
+	int x;
+	int y;
+	cout << "Enter x: ";
+	cin >> x;
+	cout << endl << "Enter y: ";
+	cin >> y;
+	cout << endl;
+	_productContext.IndividualTask(x, y);
 }

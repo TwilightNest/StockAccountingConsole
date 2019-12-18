@@ -1,1 +1,9 @@
-﻿
+﻿  User.cpp
+  AdminRole.cpp
+  UserRole.cpp
+  UsersContext.cpp
+  Product.cpp
+  ProductContext.cpp
+  Source.cpp
+  Generating Code...
+  StockAccountingConsole.vcxproj -> C:\Users\I'am\source\repos\StockAccountingConsole\x64\Debug\StockAccountingConsole.exe

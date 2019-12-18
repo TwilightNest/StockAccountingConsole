@@ -19,6 +19,10 @@ public:
 
 	void DeleteProduct();
 
+	void SortProduct();
+
+	void SearchProduct();
+
 	void ShowUsersList();
 
 	void AddUser();
@@ -26,6 +30,12 @@ public:
 	void UpdateUser();
 
 	void DeleteUser();
+
+	void SortUser();
+
+	void SearchUser();
+
+	void IndividualTask();
 
 protected:
 

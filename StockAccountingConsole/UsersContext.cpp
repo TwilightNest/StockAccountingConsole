@@ -1,6 +1,7 @@
 #include "UsersContext.h"
 #include <iostream>
 #include <sstream>
+#include <algorithm>
 
 UsersContext::UsersContext()
 {
@@ -79,6 +80,113 @@ void UsersContext::DeleteUser(string& name)
 	cout << "----------------------------------------------------------------------" << endl;
 }
 
+vector<User*> UsersContext::ConvertToPointers()
+{
+	auto result = new vector<User*>;
+	for (int i = 0; i < Users.size(); ++i)
+	{
+		result->push_back(&Users[i]);
+	}
+	return *result;
+}
+
+void UsersContext::SortUser(int& sortBy)
+{
+	struct compareByLogin {
+		bool operator()(User* a, User* b) {
+			return a->Login < b->Login;
+		}
+	};
+
+	struct compareByName {
+		bool operator()(User* a, User* b) {
+			return a->Name < b->Name;
+		}
+	};
+
+	struct compareByAdmin {
+		bool operator()(User* a, User* b) {
+			return a->IsAdmin < b->IsAdmin;
+		}
+	};
+	auto tmp = ConvertToPointers();
+	switch (sortBy)
+	{
+	case 1:
+	{
+		sort(tmp.begin(), tmp.end(), compareByLogin());
+		break;
+	}
+	case 2:
+	{
+		sort(tmp.begin(), tmp.end(), compareByName());
+		break;
+	}
+	case 3:
+	{
+		sort(tmp.begin(), tmp.end(), compareByAdmin());
+		break;
+	}
+	default:
+		cout << "----------------------------------------------------------------------" << endl;
+		cout << "Invalid choise" << endl;
+		cout << "----------------------------------------------------------------------" << endl;
+		return;
+	}
+	cout << "----------------------------------------------------------------------" << endl;
+	for (int i = 0; i < tmp.size(); ++i)
+	{
+		cout << tmp[i]->Login << "\t"
+			<< tmp[i]->Name << "\t"
+			<< tmp[i]->Password << "\t"
+			<< tmp[i]->IsAdmin << endl;
+	}
+	cout << "----------------------------------------------------------------------" << endl;
+}
+
+void UsersContext::SearchUser(string& str, int& searchBy)
+{
+	cout << "----------------------------------------------------------------------" << endl;
+	switch (searchBy)
+	{
+	case 1:
+	{
+		for (int i = 0; i < Users.size(); ++i)
+		{
+			if (Users[i].Login == str)
+				cout << UsersContext::GetStringFromUser(Users[i]);
+		}
+		break;
+	}
+	case 2:
+	{
+		for (int i = 0; i < Users.size(); ++i)
+		{
+			if (Users[i].Name == str)
+				cout << UsersContext::GetStringFromUser(Users[i]);
+		}
+		break;
+	}
+	case 3:
+	{
+		for (int i = 0; i < Users.size(); ++i)
+		{
+			if (Users[i].IsAdmin == str)
+				cout << UsersContext::GetStringFromUser(Users[i]);
+		}
+		break;
+	}
+	default:
+	{
+		cout << "----------------------------------------------------------------------" << endl;
+		cout << "Invalid choise" << endl;
+		cout << "----------------------------------------------------------------------" << endl;
+		return;
+	}
+	}
+	cout << "----------------------------------------------------------------------" << endl;
+}
+
 vector<User> UsersContext::ParseUsers()
 {
 	auto users = vector<User>();
@@ -103,6 +211,15 @@ User UsersContext::GetUserFromString(string& str)
 	}
 	User user(tmp[0], tmp[1], tmp[2], tmp[3]);
 	return user;
+}
+
+string UsersContext::GetStringFromUser(User& user)
+{
+	string tmp = user.Login + "\t"
+		+ user.Name + "\t"
+		+ user.Password + "\t"
+		+ user.IsAdmin + "\n";
+	return tmp;
 }
 
 void UsersContext::UpdateFile()

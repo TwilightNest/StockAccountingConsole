@@ -56,3 +56,24 @@ void UserRole::DeleteProduct()
 
 	_productContext.DeleteProduct(name);
 }
+
+void UserRole::SortProduct()
+{
+	int choice;
+	cout << "Sort for: \n1)Name\n2)Count\n3)Price\nInput: ";
+	cin >> choice;
+	cout << endl;
+	_productContext.SortProduct(choice);
+}
+
+void UserRole::SearchProduct()
+{
+	int choice;
+	string str;
+	cout << "Search for: \n1)Name\n2)Count\n3)Price\nInput: ";
+	cin >> choice;
+	cout << endl << "Input string for search: ";
+	cin >> str;
+	cout << endl;
+	_productContext.SearchProduct(str, choice);
+}

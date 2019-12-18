@@ -4,6 +4,16 @@
 
 using namespace std;
 
+string Product::getName() { return Name; }
+
+int Product::getCount() { return Count; }
+
+int Product::getPrice() { return Price; }
+
+tm Product::getDate() { return Date; }
+
+string Product::getFio() { return Fio; }
+
 Product::Product(string name, int count, int price, tm date, string fio)
 {
 	Name = name;

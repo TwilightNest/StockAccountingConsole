@@ -18,6 +18,12 @@ public:
 	void UpdateUser(string& name);
 
 	void DeleteUser(string& name);
+	
+	vector<User*> ConvertToPointers();
+
+	void SortUser(int& sortBy);
+
+	void SearchUser(string& str, int& searchBy);
 
 private:
 	string _path;
@@ -27,6 +33,8 @@ private:
 	vector<User> ParseUsers();
 
 	User GetUserFromString(string &str);
+
+	string GetStringFromUser(User& user);
 
 	void UpdateFile();
 };
